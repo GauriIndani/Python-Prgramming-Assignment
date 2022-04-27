@@ -1,0 +1,56 @@
+1. Write a Python program to find sum of elements in list?
+lis = [1,2,3,4,5,6]
+print(sum(lis))
+2. Write a Python program to Multiply all numbers in the list?
+lis = [1,2,3,4,5,6]
+prod = 1
+for i in lis:
+    prod = prod * i
+print(prod)
+3. Write a Python program to find smallest number in a list?
+lis = [1,2,3,4,5,6]
+print(min(lis))
+4. Write a Python program to find largest number in a list?
+lis = [1,2,3,4,5,6]
+print(max(lis))
+5. Write a Python program to find second largest number in a list?
+lis = [1,2,3,4,5,6]
+print(lis[-2])
+6. Write a Python program to find N largest elements from a list?
+lis = [1,2,3,4,5,6]
+n = int(input())
+lis.sort()
+print(lis[-n:])
+7. Write a Python program to print even numbers in a list?
+lis = [1,2,3,4,5,6]
+even_lis = []
+for i in lis:
+    if i % 2 == 0:
+        even_lis.append(i)
+print(even_lis)
+8. Write a Python program to print odd numbers in a List?
+lis = [1,2,3,4,5,6]
+odd_lis = []
+for i in lis:
+    if i % 2 != 0:
+        odd_lis.append(i)
+print(odd_lis)
+9. Write a Python program to Remove empty List from List?
+lis = [1,2,3,4,[1,2],5,6,[]]
+for i in lis:
+    if type(i) == list and len(i) == 0:
+        lis.remove(i)
+print(lis)
+10. Write a Python program to Cloning or Copying a list?
+def Cloning(li1):
+    li_copy = []
+    for item in li1: li_copy.append(item)
+    return li_copy
+li1 = [4, 8, 2, 10, 15, 18]
+li2 = Cloning(li1)
+print("Original List:", li1)
+print("After Cloning:", li2)
+11. Write a Python program to Count occurrences of an element in a list?
+lis = [1,2,3,4,1,1,1,2,2,5,6,7,7,8,[1,2],5,6,[]]
+count = lis.count(1)
+print(count)

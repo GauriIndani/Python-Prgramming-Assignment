@@ -1,0 +1,61 @@
+1. Write a Python program to find words which are greater than given length k?
+str = "Hi this is gauri Indani"
+k = int(input())
+lis = []
+str_list = str.split()
+for i in str_list:
+    if len(i) > k:
+        lis.append(i)
+print(' '.join(lis))
+
+2. Write a Python program for removing i-th character from a string?
+str = "Hi this is gauri Indani"
+k = int(input())
+outpt_str = ""
+for i in range(0,len(str)):
+    if i !=k:
+       outpt_str += str[i]
+print(outpt_str)
+3. Write a Python program to split and join a string?
+str = "Hi this is gauri Indani"
+split_str = str.split()
+convert_str = ' '.join(split_str)
+print(convert_str)
+4. Write a Python to check if a given string is binary string or not?
+string = "101010000111"
+p = set(string)
+s = {'0', '1'}
+if s == p or p == {'0'} or p == {'1'}:
+    print("Yes")
+else:
+    print("No")
+5. Write a Python program to find uncommon words from two Strings?
+string = "I am gauri indani"
+string1 = "I am Mohit Kasat"
+string_lis = string.split()
+string1_lis = string1.split()
+unc_lis = []
+for i in string_lis:
+    if i not in string1_lis:
+        unc_lis.append(i)
+for i in string1_lis:
+    if i not in string_lis:
+        unc_lis.append(i)
+print(unc_lis)
+6. Write a Python to find all duplicate characters in string?
+string = "I am gauri indani"
+str= []
+for i in string:
+    if i == ' ':
+        pass
+    elif(string.count(i) > 1):
+        str.append(i)
+print(set(str))
+7. Write a Python Program to check if a string contains any special character?
+import re
+string = input('Enter any string: ')
+special_char = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
+if (special_char.search(string) == None):
+    print('String does not contain any special characters.')
+else:
+    print('The string contains special characters.')

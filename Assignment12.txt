@@ -1,0 +1,83 @@
+1. Write a Python program to Extract Unique values dictionary values?
+from itertools import chain
+test_dict = {'gfg' : [5, 6, 7, 8],
+             'is' : [10, 11, 7, 5],
+             'best' : [6, 12, 10, 8],
+             'for' : [1, 2, 5]}
+lis =list(set(chain(*test_dict.values())))
+print(lis)
+2. Write a Python program to find the sum of all items in a dictionary?
+from itertools import chain
+
+test_dict = {'gfg' : [5, 6, 7, 8],
+             'is' : [10, 11, 7, 5],
+             'best' : [6, 12, 10, 8],
+             'for' : [1, 2, 5]}
+lis =list(set(chain(*test_dict.values())))
+print(sum(lis))
+3. Write a Python program to Merging two Dictionaries?
+dict1 = {'1':'a','2':'b'}
+dict2 = {'3':'c','4':'d'}
+print(dict1 | dict2)
+4. Write a Python program to convert key-values list to flat dictionary?
+from itertools import product
+test_dict = {'month': [1, 2, 3],
+             'name': ['Jan', 'Feb', 'March']}
+
+# printing original dictionary
+print("The original dictionary is : " + str(test_dict))
+
+# Convert key-values list to flat dictionary
+# Using dict() + zip()
+print(list(zip(test_dict['month'], test_dict['name'])))
+res = dict(zip(test_dict['month'], test_dict['name']))
+print(res)
+5. Write a Python program to insertion at the beginning in OrderedDict?
+from collections import OrderedDict
+
+dic1 = OrderedDict([('A', '100'), ('B', '200'), ('C', '300')])
+
+dic1.update({"D": '400'})
+print(dic1)
+
+dic1.move_to_end("D", last=False)
+
+print("Resultant Dictionary :")
+print(dic1)
+6. Write a Python program to check order of character in string using OrderedDict()?
+from collections import OrderedDict
+
+
+def checkOrder(input, pattern):
+    # create empty OrderedDict
+    # output will be like {'a': None,'b': None, 'c': None}
+    dict = OrderedDict.fromkeys(input)
+
+    # traverse generated OrderedDict parallel with
+    # pattern string to check if order of characters
+    # are same or not
+    ptrlen = 0
+    for key, value in dict.items():
+        if (key == pattern[ptrlen]):
+            ptrlen = ptrlen + 1
+
+        # check if we have traverse complete
+        # pattern string
+        if (ptrlen == (len(pattern))):
+            return 'true'
+
+    # if we come out from for loop that means
+    # order was mismatched
+    return 'false'
+
+
+# Driver program
+if __name__ == "__main__":
+    input = 'engineers rock'
+    pattern = 'egr'
+    print(checkOrder(input, pattern)) 
+7. Write a Python program to sort Python Dictionaries by Key or Value?
+dt = {5:4, 1:6, 6:3}
+
+sorted_dt_value = sorted(dt.values())
+print(sorted_dt_value)
